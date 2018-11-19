@@ -39,6 +39,43 @@ export default class IndexPage extends React.Component {
                   </p>
                 </div>
               ))}
+
+    
+
+    <form method="post"
+      onSubmit={(e)=> {
+        e.preventDefault()
+
+
+        fetch("https://emailoctopus.com/api/1.5/lists/c5227eae-e23a-11e8-a3c9-06b79b628af2/contacts", {
+
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:{
+            "api_key ":"49d1e20d-ec53-11e8-a3c9-06b79b628af2",
+            "email_address":document.getElementById("Email").value,
+            "fields": {
+                "FirstName": document.getElementById("FirstName").value
+            }	
+        }
+        })
+      }}
+    >
+        
+        <div class="email-octopus-form-row">
+            <label for="field_0">Email address</label>
+            <input id="Email" name="field_0" type="email" placeholder=""/>
+        </div>
+
+        <div class="email-octopus-form-row">
+            <label for="field_1">First name</label>
+            <input id="FirstName" name="field_1" type="text" placeholder=""/>
+        </div>
+<div>
+    <input type="submit" value="submit"/>
+</div>
+      
+    </form>
           </div>
         </section>
       </Layout>
