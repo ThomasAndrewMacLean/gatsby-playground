@@ -50,8 +50,7 @@ export default class IndexPage extends React.Component {
         fetch("https://emailoctopus.com/api/1.5/lists/c5227eae-e23a-11e8-a3c9-06b79b628af2/contacts", {
 
         method:"POST",
-        headers:{"Content-Type":"application/json",
-        "Access-Control-Allow-Origin": "*"},
+        headers:{"Content-Type":"application/json"},
         body:{
             "api_key": "49d1e20d-ec53-11e8-a3c9-06b79b628af2",
             "email_address": "thomas.maclean@gmail.com",
