@@ -39,45 +39,6 @@ export default class IndexPage extends React.Component {
                   </p>
                 </div>
               ))}
-
-    
-
-    <form method="post"
-      onSubmit={(e)=> {
-        e.preventDefault()
-
-
-        fetch("https://vkz9p19s67.execute-api.eu-west-1.amazonaws.com/prod", {
-
-        method:"POST",
-        
-         headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body:JSON.stringify({
-           firstName: document.getElementById('firstName').value,
-           email: document.getElementById('email').value,
-        	listId: 'c5227eae-e23a-11e8-a3c9-06b79b628af2'
-        })
-        })
-      }}
-    >
-        
-        <div class="email-octopus-form-row">
-            <label for="field_0">Email address</label>
-            <input id="email" name="field_0" type="email" placeholder=""/>
-        </div>
-
-        <div class="email-octopus-form-row">
-            <label for="field_1">First name</label>
-            <input id="firstName" name="field_1" type="text" placeholder=""/>
-        </div>
-<div>
-    <input type="submit" value="submit"/>
-</div>
-      
-    </form>
           </div>
         </section>
       </Layout>
