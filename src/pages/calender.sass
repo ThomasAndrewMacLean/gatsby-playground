@@ -1,0 +1,38 @@
+.calender
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  font: calc(2vh) "Helvetica", sans-serif;
+  justify-content: "center";
+  padding: 2em;
+  background: olive
+
+#calendar
+  display: grid
+  grid-template-columns: repeat(7, 1fr)
+  max-width: 1024px
+  width: 100%
+
+
+#calendar > *
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+#calendar > *:hover
+  color: white
+  cursor: pointer
+
+#calendar > *::before
+  content: "";
+  display: inline-block;
+  height: 0;
+  padding-bottom: 100%;
+  width: 1px;
+
+#calendar > *.today
+  border: 0.1em solid white;
+  color: white
+  border-radius: 100%;

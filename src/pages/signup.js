@@ -2,7 +2,6 @@ import React from 'react';
 // import { Link } from 'gatsby'
 
 import Layout from '../components/Layout';
-import Helmet from 'react-helmet';
 
 if (typeof window !== 'undefined') {
   window.initMap = function() {
